@@ -14,13 +14,16 @@
 .about{display:grid;grid-template-columns:1.2fr 1fr;gap:8%;padding-block:50px 80px}.small-label{font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin:0 0 18px}.about h2{font:normal clamp(42px,5.4vw,78px)/1.03 Georgia,'Times New Roman',serif;letter-spacing:-.055em;margin:0 0 26px}.about h2 em{color:var(--accent)}.about-copy>p:not(.small-label){max-width:570px;color:var(--muted);margin:0 0 18px;font-size:17px}.about-right{padding-top:4px}.experience-note{background:var(--mint);border:1px solid var(--ink);padding:28px;transform:rotate(-2deg);margin:8px 5px 34px;box-shadow:5px 6px 0 var(--ink)}.experience-note .small-label{margin-bottom:12px}.experience-note strong{display:block;font-size:clamp(42px,5vw,65px);line-height:1;letter-spacing:-.055em}.experience-note p:last-child{margin:10px 0 0;font-size:16px}details{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}summary{padding:19px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;font-size:18px;font-weight:700;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}.toggle-mark{font-size:26px;font-weight:400;line-height:1;transition:transform .2s}details[open] .toggle-mark{transform:rotate(45deg)}.school{padding:18px 0;border-top:1px solid var(--line)}.school h3{font-size:16px;margin:0 0 5px}.school p{color:var(--muted);margin:0;font-size:14px}
 .gallery-nav{position:sticky;top:0;z-index:10;background:#ebe4f6;color:var(--ink);box-shadow:0 2px 0 #7560ac12}.gallery-nav .wrap{display:flex;align-items:center;gap:7px;overflow-x:auto;padding-block:13px;scrollbar-width:thin;scrollbar-color:#a99aca #ebe4f6}.gallery-nav a{flex-shrink:0;padding:8px 14px;border:1px solid #b6a8ce;border-radius:30px;text-decoration:none;font-size:13px;min-height:40px;display:flex;align-items:center;white-space:nowrap;transition:background .2s,border-color .2s,transform .2s}.gallery-nav a:hover,.gallery-nav a[aria-current]{background:var(--lime);color:var(--ink);border-color:var(--lime)}.gallery-nav a:active{transform:scale(.96)}
 .art-section{padding-block:80px;border-bottom:1px solid var(--line)}.art-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}.art-heading h2{font:normal clamp(42px,6.2vw,88px)/1.05 Georgia,'Times New Roman',serif;letter-spacing:-.06em;margin:0}.art-heading h2 em{font-weight:normal}.section-glyph{width:64px;height:64px;display:grid;place-items:center;background:var(--tone,var(--lilac));border:1px solid var(--ink);border-radius:50%;font:36px/1 Georgia,serif;flex-shrink:0}.art-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px;align-items:start}.art-card{margin:0;min-width:0}.art-frame{position:relative;width:100%;aspect-ratio:4/5;padding:0;border:1px solid #7560ac40;display:flex;align-items:center;justify-content:center;background:var(--tone,#e4dfef);overflow:hidden;border-radius:1px;color:var(--ink);cursor:zoom-in}.art-frame img{width:100%;height:100%;object-fit:contain;display:block;position:absolute;inset:0;z-index:1;background:#f4f0f9;transition:transform .3s ease}.art-frame:not(:disabled):hover img{transform:scale(1.025)}.art-frame:disabled{opacity:1;cursor:default}.empty-art{display:grid;justify-items:center;gap:12px;padding:20px}.empty-art::before{content:'+';display:grid;place-items:center;width:52px;height:52px;border:1px solid #7560ac70;border-radius:50%;font-size:28px;font-weight:400;color:var(--accent)}.empty-art span{font-size:13px;color:var(--muted)}figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:15px;padding-top:13px;font-size:15px;font-weight:600;overflow-wrap:anywhere}
-#commissions{--tone:#e1d4f0}#commissions .art-grid{grid-template-columns:1.2fr 1fr 1fr}#commissions .art-card:nth-child(2){padding-top:52px}#commissions .art-card:nth-child(3){padding-top:100px}#fan-art{--tone:#c8c2ee}#random-art{--tone:#e4eaa9}#posters{--tone:#cce5de}#digital-art{--tone:#b9dcd9}#ai-art{--tone:#dfcbec}#mobile-art{--tone:#eee6bf}#models{--tone:#d6e3ee}#random-art .art-frame,#models .art-frame{aspect-ratio:1}#digital-art .art-frame{aspect-ratio:4/3}
+#commissions{--tone:#e1d4f0}#commissions .art-grid{grid-template-columns:1.2fr 1fr 1fr}#commissions .art-card:nth-child(2){padding-top:52px}#commissions .art-card:nth-child(3){padding-top:100px}#fan-art{--tone:#c8c2ee}#random-art{--tone:#e4eaa9}#posters{--tone:#cce5de}#digital-art{--tone:#b9dcd9}#ai-art{--tone:#dfcbec}#models{--tone:#d6e3ee}#random-art .art-frame,#models .art-frame{aspect-ratio:1}#digital-art .art-frame{aspect-ratio:4/3}
 .follow{background:var(--lilac);padding-block:75px;border-block:1px solid var(--ink);margin-top:-1px}.follow .wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.follow h2{font:normal clamp(42px,5.7vw,76px)/1.03 Georgia,'Times New Roman',serif;letter-spacing:-.05em;margin:0}.follow h2 em{display:block}.social-links{display:grid;grid-template-columns:1fr 1fr;gap:12px}.social-link{display:flex;align-items:center;gap:12px;border:1px solid var(--ink);padding:16px;min-height:62px;font-weight:700;text-decoration:none;background:#faf8f280;transition:background .2s}a.social-link:hover{background:var(--paper)}.social-link svg{width:25px;height:25px;flex-shrink:0}.social-link[aria-disabled]{background:transparent;border-style:dashed}.social-link small{display:block;font-size:12px;font-weight:400}
 .contact{padding-block:85px}.contact-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:8%;align-items:start}.contact-intro h2{font:normal clamp(42px,5.5vw,76px)/1.04 Georgia,'Times New Roman',serif;letter-spacing:-.05em;margin:0 0 22px}.contact-intro h2 em{color:var(--accent)}.contact-intro p:not(.small-label){max-width:370px;color:var(--muted)}.contact-form{background:#f0eaf8;border:1px solid var(--line);border-radius:18px;padding:30px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{margin-bottom:19px;min-width:0}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}input,select,textarea{width:100%;min-width:0;border:1px solid #b9afce;border-radius:8px;background:#fffefd;color:var(--ink);font:16px/1.5 Arial,Helvetica,sans-serif;padding:12px 13px}input,select{min-height:48px}textarea{min-height:155px;resize:vertical}input:focus,select:focus,textarea:focus{outline:3px solid #b5a0da60;border-color:var(--accent)}input::placeholder,textarea::placeholder{color:#77718b;opacity:1}.form-help{color:var(--muted);font-size:14px;margin:0 0 18px}.send-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid var(--accent);border-radius:8px;cursor:pointer;font-size:15px;font-weight:700;transition:background .2s,transform .2s;background:var(--accent);color:white}.send-button:hover{background:#675299}.send-button:active{transform:translateY(2px)}.send-button:disabled{opacity:.65;cursor:wait}.form-status{font-size:14px;color:var(--ink);margin:0}.form-status:not(:empty){margin-top:18px}
 footer{padding-block:26px}footer .wrap{display:flex;justify-content:space-between;gap:20px;font-size:13px}footer p{margin:0}dialog{width:min(1100px,96vw);max-height:94vh;max-height:94dvh;padding:20px;border:1px solid var(--line);color:var(--ink);background:var(--paper);box-shadow:0 25px 100px #7560ac40}dialog::backdrop{background:#c8bedee8}.viewer-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:15px}#viewer-title{margin:0;font-size:16px;font-weight:600;overflow-wrap:anywhere}.close-viewer{background:transparent;border:1px solid var(--accent);color:var(--ink);min-height:44px;padding:8px 16px;cursor:pointer}#viewer-image{display:block;width:100%;height:74vh;height:74dvh;object-fit:contain}
 @media(min-width:1600px){.hero h1{font-size:260px}}@media(max-width:1100px){.wrap{width:calc(100% - 56px)}.header-note{display:none}.gallery-nav .wrap{width:calc(100% - 32px)}.about{gap:5%}.social-link{padding:14px 11px}.art-grid{gap:24px 18px}}
 @media(max-width:760px){html{scroll-padding-top:85px}.wrap{width:calc(100% - 36px)}.header-inner{min-height:74px;gap:15px;flex-wrap:wrap;padding-block:14px}.wordmark{font-size:26px}.top-nav{gap:14px}.top-nav a{font-size:13px}.hero{padding-block:30px}.hero-top{font-size:11px;gap:12px}.hero h1{font-size:17.4vw;margin-block:30px}.hero-bottom{align-items:start;gap:15px}.hero-bottom p{font-size:14px;max-width:260px}.hero-bottom em{font-size:21px}.about{grid-template-columns:1fr;padding-block:35px 55px;gap:30px}.about h2{font-size:clamp(42px,8vw,64px)}.about-copy>p:not(.small-label){font-size:16px}.experience-note{transform:rotate(-1deg);margin:4px 5px 28px;padding:24px}.experience-note strong{font-size:48px}.art-section{padding-block:50px}.art-heading{margin-bottom:24px;gap:16px}.art-heading h2{font-size:clamp(38px,8vw,58px)}.section-glyph{width:45px;height:45px;font-size:27px}.art-grid,#commissions .art-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}#commissions .art-card:nth-child(2),#commissions .art-card:nth-child(3){padding-top:0}#commissions .art-card:first-child{grid-column:1/-1}#commissions .art-card:first-child .art-frame{aspect-ratio:5/4}figcaption{font-size:14px;padding-top:10px}.follow{padding-block:50px}.follow .wrap{grid-template-columns:1fr;gap:30px}.follow h2{font-size:52px}.social-link{font-size:14px;padding:14px}footer .wrap{flex-wrap:wrap;gap:10px}.contact{padding-block:50px}.contact-layout{grid-template-columns:1fr;gap:24px}.contact-form{padding:22px}}
 @media(max-width:420px){.form-row{grid-template-columns:1fr;gap:0}.contact-form{padding:18px}.top-nav{gap:18px;width:100%;justify-content:space-between}.send-button{width:100%}}@media(max-width:380px){.social-link{padding:12px 9px;gap:8px}.art-grid,#commissions .art-grid{grid-template-columns:1fr}#commissions .art-card:first-child{grid-column:auto}#commissions .art-card:first-child .art-frame{aspect-ratio:4/5}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before{transition:none!important}}
+
+.gallery-actions{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:26px}.gallery-count{font-size:14px;color:var(--muted)}.view-gallery{border:1px solid var(--accent);border-radius:30px;background:var(--lilac);color:var(--ink);min-height:46px;padding:11px 22px;font:600 15px Arial,sans-serif;cursor:pointer;transition:background .2s,transform .2s}.view-gallery:hover{background:var(--mint)}.view-gallery:active{transform:scale(.98)}#category-viewer{width:min(1250px,96vw);padding:0 28px 28px;overscroll-behavior:contain}.category-toolbar{position:sticky;top:0;z-index:3;background:var(--paper);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);margin-bottom:24px}.category-toolbar h2{margin:0;font:italic 38px/1.15 Georgia,serif;letter-spacing:-.04em}.category-toolbar button{flex-shrink:0}#category-grid{--tone:#e1d4f0;grid-template-columns:repeat(3,minmax(0,1fr))}#category-grid .art-frame{aspect-ratio:4/5}#category-grid .art-card{padding-top:0}
+@media(max-width:760px){.art-section>.art-grid,#commissions>.art-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding-bottom:14px}.art-section>.art-grid>.art-card{flex:0 0 78%;scroll-snap-align:start}#commissions>.art-grid>.art-card:first-child .art-frame{aspect-ratio:4/5}.gallery-actions{align-items:start;flex-direction:column;gap:12px}.art-section>.art-grid .art-frame{aspect-ratio:4/5}#category-viewer{padding:0 16px 20px}#category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}.category-toolbar{padding:16px 0;gap:12px}.category-toolbar h2{font-size:29px}.category-toolbar button{font-size:13px;padding:8px 10px}.gallery-count{margin:0}}@media(max-width:380px){#category-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -29,7 +32,7 @@ footer{padding-block:26px}footer .wrap{display:flex;justify-content:space-betwee
 <main id="top">
 <section class="hero wrap" aria-labelledby="site-title"><div class="hero-top"><p>ART &amp; GRAPHIC DESIGN</p><p>BY VIRAJ BAXI</p></div><h1 id="site-title">VIRUZEN</h1><div class="hero-bottom"><p>A little imagination.<br><em>A lot of making.</em></p><span class="tiny-star" aria-hidden="true">✳</span><p>Commissions. Characters.<br>Creative experiments.</p></div></section>
 <section class="about wrap" id="about" aria-labelledby="about-title"><div class="about-copy"><p class="small-label">About me</p><h2 id="about-title">Made of<br><em>curiosity.</em></h2><p>I’m Viraj Baxi, the person behind Viruzen. Graphic design is my hobby and a space where I get to follow an idea, experiment, and make something of my own.</p><p>Alongside that, I have six years of freelance graphic design experience, creating commissions, vector artwork, and visual work for clients. This is where my commissioned pieces and personal art live together.</p></div><div class="about-right"><div class="experience-note"><p class="small-label">Freelance graphic designer</p><strong>6 years</strong><p>Client commissions. Personal creativity.</p></div><details><summary>Education <span class="toggle-mark" aria-hidden="true">+</span></summary><div class="school"><h3>Humber College — Toronto, Canada</h3><p>Advanced Diploma in Game Programming</p></div><div class="school"><h3>RMS Polytechnic — Gujarat, India</h3><p>Diploma in Computer Engineering</p></div><div class="school"><h3>Arena Animation — India</h3><p>Game Design, Real-Time Visual Effects (VFX) &amp; 3D Asset Creation</p></div></details></div></section>
-<nav class="gallery-nav" aria-label="Artwork categories"><div class="wrap"><a href="#commissions">Commissions</a><a href="#fan-art">Fan art</a><a href="#random-art">Random art</a><a href="#posters">Posters</a><a href="#digital-art">Digital art</a><a href="#ai-art">AI art</a><a href="#mobile-art">Mobile art</a><a href="#models">3D models</a></div></nav>
+<nav class="gallery-nav" aria-label="Artwork categories"><div class="wrap"><a href="#commissions">Commissions</a><a href="#fan-art">Fan art</a><a href="#random-art">Random art</a><a href="#posters">Posters</a><a href="#digital-art">Digital art</a><a href="#ai-art">AI art</a><a href="#models">3D models</a></div></nav>
 <div id="galleries" class="wrap"></div><noscript><p class="wrap">Please enable JavaScript to view the art galleries.</p></noscript>
 <section class="follow" id="follow" aria-labelledby="follow-title"><div class="wrap"><div><p class="small-label">Find me elsewhere</p><h2 id="follow-title">Follow the<br><em>next idea.</em></h2></div><div class="social-links">
 <a class="social-link" href="https://www.youtube.com/@viruzen6063" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="5" fill="currentColor"/><path d="M10 8L17 12L10 16Z" fill="#ded5f2"/></svg><span>YouTube</span></a>
@@ -46,12 +49,15 @@ footer{padding-block:26px}footer .wrap{display:flex;justify-content:space-betwee
 </form></div></section>
 </main>
 <footer><div class="wrap"><p>© <span id="year">2026</span> Viruzen · Viraj Baxi</p><p>Always making something.</p></div></footer>
+<dialog id="category-viewer" aria-labelledby="category-title"><div class="category-toolbar"><h2 id="category-title"></h2><button type="button" class="close-viewer" id="close-category">Back to portfolio</button></div><div class="art-grid" id="category-grid"></div></dialog>
 <dialog id="art-viewer" aria-labelledby="viewer-title"><div class="viewer-toolbar"><p id="viewer-title"></p><button class="close-viewer" type="button">Close</button></div><img id="viewer-image" alt=""></dialog>
 <script>
 /* YOUR ARTWORK: Put an images folder beside index.html, using the subfolders
    below. Change each title and src to your real artwork. Add or remove item
    lines as needed. Filenames are case-sensitive on GitHub Pages.
    These are editable slots; missing images show Coming soon.
+   Add as many artwork lines as you need in each category. The first 3
+   appear on the homepage; View all opens every item in that category.
    Use images of renders for 3D models. No video files are required. */
 const ARTWORKS = [
  {id:'commissions',label:'Commissions',glyph:'✳',items:[
@@ -78,10 +84,6 @@ const ARTWORKS = [
   {title:'AI artwork 01',src:'images/ai-art/ai-01.jpg'},
   {title:'AI artwork 02',src:'images/ai-art/ai-02.jpg'},
   {title:'AI artwork 03',src:'images/ai-art/ai-03.jpg'}]},
- {id:'mobile-art',label:'Mobile art',glyph:'✳',items:[
-  {title:'Mobile artwork 01',src:'images/mobile-art/mobile-01.jpg'},
-  {title:'Mobile artwork 02',src:'images/mobile-art/mobile-02.jpg'},
-  {title:'Mobile artwork 03',src:'images/mobile-art/mobile-03.jpg'}]},
  {id:'models',label:'3D models',glyph:'✦',items:[
   {title:'3D model 01',src:'images/models/model-01.jpg'},
   {title:'3D model 02',src:'images/models/model-02.jpg'},
@@ -94,6 +96,22 @@ const viewer=document.getElementById('art-viewer');
 const viewerImage=document.getElementById('viewer-image');
 const viewerTitle=document.getElementById('viewer-title');
 let lastArtwork=null;
+const categoryViewer=document.getElementById('category-viewer');
+const categoryGrid=document.getElementById('category-grid');
+const categoryTitle=document.getElementById('category-title');
+let lastCategoryButton=null;
+function updateScrollLock(){document.body.style.overflow=(viewer.open||categoryViewer.open)?'hidden':'';}
+function createArtCard(art){
+ const figure=document.createElement('figure');figure.className='art-card';
+ const button=document.createElement('button');button.type='button';button.className='art-frame';button.disabled=true;button.setAttribute('aria-label','View '+art.title);
+ const missing=document.createElement('div');missing.className='empty-art';const missingText=document.createElement('span');missingText.textContent='Coming soon';missing.append(missingText);
+ const image=document.createElement('img');image.alt=art.title;image.loading='lazy';image.decoding='async';image.style.opacity='0';
+ image.addEventListener('load',()=>{missing.hidden=true;image.hidden=false;image.style.opacity='1';button.disabled=false;});
+ image.addEventListener('error',()=>{image.hidden=true;missing.hidden=false;button.disabled=true;});
+ image.src=art.src;button.append(missing,image);
+ button.addEventListener('click',()=>{lastArtwork=button;viewerTitle.textContent=art.title;viewerImage.alt=art.title;viewerImage.src=image.currentSrc||image.src;viewer.showModal();updateScrollLock();});
+ const caption=document.createElement('figcaption');caption.textContent=art.title;figure.append(button,caption);return figure;
+}
 ARTWORKS.forEach(category=>{
  const section=document.createElement('section');section.className='art-section';section.id=category.id;section.setAttribute('aria-labelledby',category.id+'-title');
  const heading=document.createElement('div');heading.className='art-heading';
@@ -101,21 +119,24 @@ ARTWORKS.forEach(category=>{
  const emphasis=document.createElement('em');emphasis.textContent=category.label;title.append(emphasis);
  const glyph=document.createElement('span');glyph.className='section-glyph';glyph.setAttribute('aria-hidden','true');glyph.textContent=category.glyph;heading.append(title,glyph);
  const grid=document.createElement('div');grid.className='art-grid';
- category.items.forEach(art=>{
-  const figure=document.createElement('figure');figure.className='art-card';
-  const button=document.createElement('button');button.type='button';button.className='art-frame';button.disabled=true;button.setAttribute('aria-label','View '+art.title);
-  const missing=document.createElement('div');missing.className='empty-art';const missingText=document.createElement('span');missingText.textContent='Coming soon';missing.append(missingText);
-  const image=document.createElement('img');image.alt=art.title;image.loading='lazy';image.decoding='async';image.style.opacity='0';
-  image.addEventListener('load',()=>{missing.hidden=true;image.hidden=false;image.style.opacity='1';button.disabled=false;});
-  image.addEventListener('error',()=>{image.hidden=true;missing.hidden=false;button.disabled=true;});
-  image.src=art.src;button.append(missing,image);
-  button.addEventListener('click',()=>{lastArtwork=button;viewerTitle.textContent=art.title;viewerImage.alt=art.title;viewerImage.src=image.currentSrc||image.src;viewer.showModal();document.body.style.overflow='hidden';});
-  const caption=document.createElement('figcaption');caption.textContent=art.title;figure.append(button,caption);grid.append(figure);
- });section.append(heading,grid);galleries.append(section);
+ category.items.slice(0,3).forEach(art=>grid.append(createArtCard(art)));
+ const actions=document.createElement('div');actions.className='gallery-actions';
+ const count=document.createElement('span');count.className='gallery-count';count.textContent=category.items.length+' artworks';
+ const showAll=document.createElement('button');showAll.type='button';showAll.className='view-gallery';showAll.textContent='View all '+category.label.toLowerCase();showAll.setAttribute('aria-haspopup','dialog');
+ showAll.addEventListener('click',()=>{
+  lastCategoryButton=showAll;categoryTitle.textContent=category.label;
+  categoryGrid.replaceChildren();
+  categoryGrid.style.setProperty('--tone',getComputedStyle(section).getPropertyValue('--tone'));
+  category.items.forEach(art=>categoryGrid.append(createArtCard(art)));
+  categoryViewer.showModal();categoryViewer.scrollTop=0;updateScrollLock();
+ });
+ actions.append(count,showAll);section.append(heading,grid,actions);galleries.append(section);
 });
+document.getElementById('close-category').addEventListener('click',()=>categoryViewer.close());
+categoryViewer.addEventListener('close',()=>{updateScrollLock();if(lastCategoryButton)lastCategoryButton.focus({preventScroll:true});});
 viewer.querySelector('button').addEventListener('click',()=>viewer.close());
-viewer.addEventListener('click',event=>{const b=viewer.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)viewer.close();});
-viewer.addEventListener('close',()=>{document.body.style.overflow='';if(lastArtwork)lastArtwork.focus();});
+[viewer,categoryViewer].forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const b=dialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)dialog.close();}));
+viewer.addEventListener('close',()=>{updateScrollLock();if(lastArtwork)lastArtwork.focus({preventScroll:true});});
 if(TIKTOK_URL){const placeholder=document.getElementById('tiktok-pending');const link=document.createElement('a');link.className='social-link';link.href=TIKTOK_URL;link.target='_blank';link.rel='noopener noreferrer';link.append(placeholder.querySelector('svg'));const label=document.createElement('span');label.textContent='TikTok';link.append(label);placeholder.replaceWith(link);}
 document.getElementById('year').textContent=new Date().getFullYear();
 const categoryLinks=Array.from(document.querySelectorAll('.gallery-nav a'));
@@ -156,308 +177,6 @@ contactForm.addEventListener('submit',async event=>{
  }
 });
 ['sender-name','sender-message'].forEach(id=>document.getElementById(id).addEventListener('input',event=>event.target.setCustomValidity('')));
-</script>
-<!-- Paste this immediately BEFORE </body> in your existing index.html. -->
-
-<style>
-  #mobile-art,
-  .gallery-nav a[href="#mobile-art"] {
-    display: none !important;
-  }
-
-  .view-all-button {
-    margin-top: 24px;
-    padding: 12px 24px;
-    min-height: 46px;
-    border: 1px solid var(--accent);
-    border-radius: 30px;
-    background: var(--lilac);
-    color: var(--ink);
-    font: 600 15px Arial, sans-serif;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  .view-all-button:hover {
-    background: var(--mint, #dcf1e8);
-  }
-
-  .view-all-button:active {
-    transform: scale(0.97);
-  }
-
-  #full-gallery {
-    width: min(1200px, 96vw);
-    max-height: 90vh;
-    max-height: 90dvh;
-    padding: 0 24px 24px;
-    background: var(--paper);
-    color: var(--ink);
-    border: 1px solid var(--line);
-    overscroll-behavior: contain;
-  }
-
-  #full-gallery::backdrop {
-    background: #c8bedee8;
-  }
-
-  .full-gallery-header {
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding: 20px 0;
-    margin-bottom: 24px;
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
-  }
-
-  #full-gallery-title {
-    margin: 0;
-    font: italic 36px/1.2 Georgia, serif;
-  }
-
-  #full-gallery-close {
-    min-height: 44px;
-    padding: 10px 16px;
-    border: 1px solid var(--accent);
-    border-radius: 8px;
-    background: var(--lilac);
-    color: var(--ink);
-    cursor: pointer;
-  }
-
-  #full-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 28px 20px;
-  }
-
-  #full-gallery-grid .art-card {
-    padding-top: 0;
-  }
-
-  #full-gallery-grid .art-frame {
-    aspect-ratio: 4 / 5;
-  }
-
-  @media (max-width: 760px) {
-    #full-gallery {
-      padding: 0 16px 20px;
-    }
-
-    #full-gallery-title {
-      font-size: 27px;
-    }
-
-    #full-gallery-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px 12px;
-    }
-
-    #full-gallery-close {
-      font-size: 13px;
-    }
-  }
-
-  @media (max-width: 380px) {
-    #full-gallery-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .view-all-button {
-      transition: none;
-    }
-  }
-</style>
-
-<script>
-(() => {
-  /* Remove Mobile art from the page and artwork list. */
-  document.getElementById("mobile-art")?.remove();
-  document
-    .querySelector('.gallery-nav a[href="#mobile-art"]')
-    ?.remove();
-
-  if (typeof ARTWORKS === "undefined") return;
-
-  const mobileIndex = ARTWORKS.findIndex(
-    category => category.id === "mobile-art"
-  );
-
-  if (mobileIndex !== -1) {
-    ARTWORKS.splice(mobileIndex, 1);
-  }
-
-  /* Avoid adding duplicate galleries to the already-updated version. */
-  if (
-    document.getElementById("category-viewer") ||
-    document.getElementById("full-gallery")
-  ) {
-    return;
-  }
-
-  const gallery = document.createElement("dialog");
-  gallery.id = "full-gallery";
-  gallery.setAttribute("aria-labelledby", "full-gallery-title");
-
-  gallery.innerHTML = `
-    <div class="full-gallery-header">
-      <h2 id="full-gallery-title"></h2>
-      <button id="full-gallery-close" type="button">
-        Back to portfolio
-      </button>
-    </div>
-    <div id="full-gallery-grid"></div>
-  `;
-
-  document.body.append(gallery);
-
-  const galleryTitle = gallery.querySelector("#full-gallery-title");
-  const galleryGrid = gallery.querySelector("#full-gallery-grid");
-  const imageViewer = document.getElementById("art-viewer");
-
-  let openingButton = null;
-
-  function updateScrollLock() {
-    document.body.style.overflow =
-      gallery.open || imageViewer?.open ? "hidden" : "";
-  }
-
-  function makeArtworkCard(art) {
-    const figure = document.createElement("figure");
-    figure.className = "art-card";
-
-    const button = document.createElement("button");
-    button.className = "art-frame";
-    button.type = "button";
-    button.disabled = true;
-    button.setAttribute("aria-label", "View " + art.title);
-
-    const placeholder = document.createElement("div");
-    placeholder.className = "empty-art";
-
-    const placeholderText = document.createElement("span");
-    placeholderText.textContent = "Coming soon";
-    placeholder.append(placeholderText);
-
-    const image = document.createElement("img");
-    image.alt = art.title;
-    image.loading = "lazy";
-    image.decoding = "async";
-    image.style.opacity = "0";
-
-    image.addEventListener("load", () => {
-      placeholder.hidden = true;
-      image.hidden = false;
-      image.style.opacity = "1";
-      button.disabled = false;
-    });
-
-    image.addEventListener("error", () => {
-      image.hidden = true;
-      placeholder.hidden = false;
-      button.disabled = true;
-    });
-
-    image.src = art.src;
-    button.append(placeholder, image);
-
-    button.addEventListener("click", () => {
-      if (!imageViewer) return;
-
-      const enlargedImage = document.getElementById("viewer-image");
-
-      document.getElementById("viewer-title").textContent = art.title;
-      enlargedImage.src = image.currentSrc || image.src;
-      enlargedImage.alt = art.title;
-
-      if (typeof lastArtwork !== "undefined") {
-        lastArtwork = button;
-      }
-
-      imageViewer.showModal();
-      updateScrollLock();
-    });
-
-    const caption = document.createElement("figcaption");
-    caption.textContent = art.title;
-
-    figure.append(button, caption);
-    return figure;
-  }
-
-  ARTWORKS.forEach(category => {
-    const section = document.getElementById(category.id);
-    const previewGrid = section?.querySelector(".art-grid");
-
-    if (!previewGrid) return;
-
-    /* Only the first three artworks appear on the main page. */
-    Array.from(previewGrid.children).forEach((card, index) => {
-      if (index >= 3) card.remove();
-    });
-
-    const button = document.createElement("button");
-    button.className = "view-all-button";
-    button.type = "button";
-    button.textContent = "View all " + category.label.toLowerCase();
-    button.setAttribute("aria-haspopup", "dialog");
-
-    button.addEventListener("click", () => {
-      openingButton = button;
-      galleryTitle.textContent = category.label;
-      galleryGrid.replaceChildren();
-
-      galleryGrid.style.setProperty(
-        "--tone",
-        getComputedStyle(section).getPropertyValue("--tone")
-      );
-
-      /* Every artwork in this category appears in the full gallery. */
-      category.items.forEach(art => {
-        galleryGrid.append(makeArtworkCard(art));
-      });
-
-      gallery.showModal();
-      gallery.scrollTop = 0;
-      updateScrollLock();
-    });
-
-    section.append(button);
-  });
-
-  gallery
-    .querySelector("#full-gallery-close")
-    .addEventListener("click", () => gallery.close());
-
-  gallery.addEventListener("close", () => {
-    updateScrollLock();
-    openingButton?.focus({ preventScroll: true });
-  });
-
-  imageViewer?.addEventListener("close", updateScrollLock);
-
-  gallery.addEventListener("click", event => {
-    if (event.target !== gallery) return;
-
-    const bounds = gallery.getBoundingClientRect();
-
-    if (
-      event.clientX < bounds.left ||
-      event.clientX > bounds.right ||
-      event.clientY < bounds.top ||
-      event.clientY > bounds.bottom
-    ) {
-      gallery.close();
-    }
-  });
-})();
 </script>
 </body>
 </html>
