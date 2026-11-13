@@ -157,5 +157,307 @@ contactForm.addEventListener('submit',async event=>{
 });
 ['sender-name','sender-message'].forEach(id=>document.getElementById(id).addEventListener('input',event=>event.target.setCustomValidity('')));
 </script>
+<!-- Paste this immediately BEFORE </body> in your existing index.html. -->
+
+<style>
+  #mobile-art,
+  .gallery-nav a[href="#mobile-art"] {
+    display: none !important;
+  }
+
+  .view-all-button {
+    margin-top: 24px;
+    padding: 12px 24px;
+    min-height: 46px;
+    border: 1px solid var(--accent);
+    border-radius: 30px;
+    background: var(--lilac);
+    color: var(--ink);
+    font: 600 15px Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .view-all-button:hover {
+    background: var(--mint, #dcf1e8);
+  }
+
+  .view-all-button:active {
+    transform: scale(0.97);
+  }
+
+  #full-gallery {
+    width: min(1200px, 96vw);
+    max-height: 90vh;
+    max-height: 90dvh;
+    padding: 0 24px 24px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    overscroll-behavior: contain;
+  }
+
+  #full-gallery::backdrop {
+    background: #c8bedee8;
+  }
+
+  .full-gallery-header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    margin-bottom: 24px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+
+  #full-gallery-title {
+    margin: 0;
+    font: italic 36px/1.2 Georgia, serif;
+  }
+
+  #full-gallery-close {
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    background: var(--lilac);
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  #full-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  #full-gallery-grid .art-card {
+    padding-top: 0;
+  }
+
+  #full-gallery-grid .art-frame {
+    aspect-ratio: 4 / 5;
+  }
+
+  @media (max-width: 760px) {
+    #full-gallery {
+      padding: 0 16px 20px;
+    }
+
+    #full-gallery-title {
+      font-size: 27px;
+    }
+
+    #full-gallery-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px 12px;
+    }
+
+    #full-gallery-close {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    #full-gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .view-all-button {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+(() => {
+  /* Remove Mobile art from the page and artwork list. */
+  document.getElementById("mobile-art")?.remove();
+  document
+    .querySelector('.gallery-nav a[href="#mobile-art"]')
+    ?.remove();
+
+  if (typeof ARTWORKS === "undefined") return;
+
+  const mobileIndex = ARTWORKS.findIndex(
+    category => category.id === "mobile-art"
+  );
+
+  if (mobileIndex !== -1) {
+    ARTWORKS.splice(mobileIndex, 1);
+  }
+
+  /* Avoid adding duplicate galleries to the already-updated version. */
+  if (
+    document.getElementById("category-viewer") ||
+    document.getElementById("full-gallery")
+  ) {
+    return;
+  }
+
+  const gallery = document.createElement("dialog");
+  gallery.id = "full-gallery";
+  gallery.setAttribute("aria-labelledby", "full-gallery-title");
+
+  gallery.innerHTML = `
+    <div class="full-gallery-header">
+      <h2 id="full-gallery-title"></h2>
+      <button id="full-gallery-close" type="button">
+        Back to portfolio
+      </button>
+    </div>
+    <div id="full-gallery-grid"></div>
+  `;
+
+  document.body.append(gallery);
+
+  const galleryTitle = gallery.querySelector("#full-gallery-title");
+  const galleryGrid = gallery.querySelector("#full-gallery-grid");
+  const imageViewer = document.getElementById("art-viewer");
+
+  let openingButton = null;
+
+  function updateScrollLock() {
+    document.body.style.overflow =
+      gallery.open || imageViewer?.open ? "hidden" : "";
+  }
+
+  function makeArtworkCard(art) {
+    const figure = document.createElement("figure");
+    figure.className = "art-card";
+
+    const button = document.createElement("button");
+    button.className = "art-frame";
+    button.type = "button";
+    button.disabled = true;
+    button.setAttribute("aria-label", "View " + art.title);
+
+    const placeholder = document.createElement("div");
+    placeholder.className = "empty-art";
+
+    const placeholderText = document.createElement("span");
+    placeholderText.textContent = "Coming soon";
+    placeholder.append(placeholderText);
+
+    const image = document.createElement("img");
+    image.alt = art.title;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.style.opacity = "0";
+
+    image.addEventListener("load", () => {
+      placeholder.hidden = true;
+      image.hidden = false;
+      image.style.opacity = "1";
+      button.disabled = false;
+    });
+
+    image.addEventListener("error", () => {
+      image.hidden = true;
+      placeholder.hidden = false;
+      button.disabled = true;
+    });
+
+    image.src = art.src;
+    button.append(placeholder, image);
+
+    button.addEventListener("click", () => {
+      if (!imageViewer) return;
+
+      const enlargedImage = document.getElementById("viewer-image");
+
+      document.getElementById("viewer-title").textContent = art.title;
+      enlargedImage.src = image.currentSrc || image.src;
+      enlargedImage.alt = art.title;
+
+      if (typeof lastArtwork !== "undefined") {
+        lastArtwork = button;
+      }
+
+      imageViewer.showModal();
+      updateScrollLock();
+    });
+
+    const caption = document.createElement("figcaption");
+    caption.textContent = art.title;
+
+    figure.append(button, caption);
+    return figure;
+  }
+
+  ARTWORKS.forEach(category => {
+    const section = document.getElementById(category.id);
+    const previewGrid = section?.querySelector(".art-grid");
+
+    if (!previewGrid) return;
+
+    /* Only the first three artworks appear on the main page. */
+    Array.from(previewGrid.children).forEach((card, index) => {
+      if (index >= 3) card.remove();
+    });
+
+    const button = document.createElement("button");
+    button.className = "view-all-button";
+    button.type = "button";
+    button.textContent = "View all " + category.label.toLowerCase();
+    button.setAttribute("aria-haspopup", "dialog");
+
+    button.addEventListener("click", () => {
+      openingButton = button;
+      galleryTitle.textContent = category.label;
+      galleryGrid.replaceChildren();
+
+      galleryGrid.style.setProperty(
+        "--tone",
+        getComputedStyle(section).getPropertyValue("--tone")
+      );
+
+      /* Every artwork in this category appears in the full gallery. */
+      category.items.forEach(art => {
+        galleryGrid.append(makeArtworkCard(art));
+      });
+
+      gallery.showModal();
+      gallery.scrollTop = 0;
+      updateScrollLock();
+    });
+
+    section.append(button);
+  });
+
+  gallery
+    .querySelector("#full-gallery-close")
+    .addEventListener("click", () => gallery.close());
+
+  gallery.addEventListener("close", () => {
+    updateScrollLock();
+    openingButton?.focus({ preventScroll: true });
+  });
+
+  imageViewer?.addEventListener("close", updateScrollLock);
+
+  gallery.addEventListener("click", event => {
+    if (event.target !== gallery) return;
+
+    const bounds = gallery.getBoundingClientRect();
+
+    if (
+      event.clientX < bounds.left ||
+      event.clientX > bounds.right ||
+      event.clientY < bounds.top ||
+      event.clientY > bounds.bottom
+    ) {
+      gallery.close();
+    }
+  });
+})();
+</script>
 </body>
 </html>
